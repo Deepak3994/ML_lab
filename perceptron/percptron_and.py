@@ -52,6 +52,6 @@ def main():
 			  [-1,1,0],
 			  [-1,-1,0]]
 	l_rate = 1
-	predict_and(l_rate,dataset,1,1)
+	predict_and(l_rate,dataset,-1,1)
 
 main()

@@ -48,6 +48,6 @@ def main():
 	dataset = [[1,0],
 			  [-1,1],]
 	l_rate = 1
-	predict_not(l_rate,dataset,1)
+	predict_not(l_rate,dataset,-1)
 
 main()

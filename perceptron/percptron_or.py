@@ -1,9 +1,7 @@
 
 def activation_function(yin):
-	if yin == 0:
+	if yin <= 0:
 		return 0
-	elif yin < 0:
-		return -1
 	else:
 		return 1
 
@@ -17,6 +15,7 @@ def train_model(learn_rate,data):
 	for i in range(len(data)):
 		x1 = data[i][0]
 		x2 = data[i][1]
+		print(x1,x2)
 		y_actual = data[i][2]
 		yin = bias + x1 * weight1 + x2 * weight2
 		y_predicted = activation_function(yin)
@@ -28,6 +27,7 @@ def train_model(learn_rate,data):
 	weights.append(bias)
 	weights.append(weight1)
 	weights.append(weight2)
+	print(weights)
 	return(weights)
 
 
@@ -37,6 +37,7 @@ def predict_or(learn_rate,data,x1,x2):
 	w1 = weights[1]
 	w2 = weights[2]
 	yin = bias + x1 * w1 + x2 * w2
+	print(yin)
 	target = activation_function(yin)
 	if target >0:
 		y_predicted = 1
