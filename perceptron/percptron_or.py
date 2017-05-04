@@ -1,4 +1,3 @@
-
 def activation_function(yin):
 	if yin <= 0:
 		return 0
